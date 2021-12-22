@@ -1,5 +1,5 @@
 {
-  "name": "response-handler",
+  "name": "http-response-handler",
   "version": "1.0.0",
   "description": "Handle HTTP responses",
   "main": "dist/index.js",
