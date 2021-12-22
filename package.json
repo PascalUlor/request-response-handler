@@ -1,5 +1,5 @@
 {
-  "name": "httpresponsehandler",
+  "name": "response-handler",
   "version": "1.0.0",
   "description": "Handle HTTP responses",
   "main": "dist/index.js",
@@ -49,5 +49,13 @@
   },
   "jest": {
     "testEnvironment": "node"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PascalUlor/http-response-handler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PascalUlor/http-response-handler/issues"
+  },
+  "homepage": "https://github.com/PascalUlor/http-response-handler#readme"
 }
