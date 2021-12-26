@@ -1,11 +1,8 @@
 {
-  "name": "http-response-handler",
+  "name": "request-response-handler",
   "version": "1.0.0",
-  "description": "Handle HTTP responses",
+  "description": "Handle HTTP request responses",
   "main": "dist/index.js",
-  "engines": {
-    "node": "14.18.1"
-  },
   "scripts": {
     "clean": "rm -rf dist && mkdir dist",
     "build": "npm run clean && npm run build-src",
@@ -16,6 +13,7 @@
     "dev": "NODE_ENV=development npm-run-all src",
     "lint": "eslint --fix src/",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "NODE_ENV=production npm run build && npm run serve",
     "format": "npx prettier --write .",
     "watch": "nodemon"
   },
@@ -37,8 +35,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "http-status-codes": "^2.1.4",
-    "jest": "^27.3.1",
-    "winston": "^3.3.3"
+    "jest": "^27.3.1"
   },
   "nodemonConfig": {
     "exec": "npm run dev",
@@ -52,10 +49,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PascalUlor/http-response-handler.git"
+    "url": "git+https://github.com/PascalUlor/request-response-handler.git"
   },
   "bugs": {
-    "url": "https://github.com/PascalUlor/http-response-handler/issues"
+    "url": "https://github.com/PascalUlor/request-response-handler/issues"
   },
-  "homepage": "https://github.com/PascalUlor/http-response-handler#readme"
+  "homepage": "https://github.com/PascalUlor/request-response-handler#readme"
 }

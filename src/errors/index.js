@@ -1,5 +1,5 @@
 import {
-  BAD_REQUEST, CONFLICT, NOT_FOUND, SERVER_ERROR, FORBIDDEN, UNAUTHORIZED,
+  BAD_REQUEST, CONFLICT, NOT_FOUND, SERVER_ERROR, FORBIDDEN, UNAUTHORIZED, createError,
 } from './errors';
 
 /**
@@ -138,4 +138,13 @@ const errorsObject = {
    */
 const customErrorHandler = () => Object.keys(errorsObject).map((key) => errorsObject[key]);
 
-export default customErrorHandler;
+export {
+  customErrorHandler,
+  createError,
+  BAD_REQUEST,
+  CONFLICT,
+  NOT_FOUND,
+  SERVER_ERROR,
+  UNAUTHORIZED,
+  FORBIDDEN,
+};
