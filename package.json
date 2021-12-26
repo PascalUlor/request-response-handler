@@ -1,6 +1,6 @@
 {
   "name": "request-response-handler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Handle HTTP request responses",
   "main": "dist/index.js",
   "scripts": {

@@ -19,7 +19,7 @@ These instructions will get you started on using the package
 ### Installation
 
 ```
-npm install --save error-handler-module
+npm install --save request-response-handler
 ```
 
 ## Usage
