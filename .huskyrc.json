@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "commit-msg": "(branch=$(git branch | sed -n -e 's/^\\* \\(.*\\)/\\1/p');[[ $branch =~ ^(develop|master|(release|hotfix)\/v[0-9](.[0-9]){1,})$ ]]) || (commitlint -E HUSKY_GIT_PARAMS && npm run lint && npm run test)"
+    "commit-msg": "(branch=$(git branch | sed -n -e 's/^\\* \\(.*\\)/\\1/p');[[ $branch =~ ^(develop|master|(release|hotfix)\/v[0-9](.[0-9]){1,})$ ]]) || (commitlint -E $1 && npm run lint && npm run test)"
   }
 }
