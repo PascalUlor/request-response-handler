@@ -88,3 +88,5 @@ dump.rdb
 dump.js
 dump.json
 web3doc.js
+node_modules
+dist
