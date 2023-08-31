@@ -115,7 +115,7 @@ const resourceConflict = (err, req, res, next) => {
    * @param {object} next
    * @return {object}
    */
-const serverError = (err, req, res, next) => res.status(SERVER_ERROR).json({
+const serverError = (err, req, res) => res.status(SERVER_ERROR).json({
   success: false,
   message: err.message || 'Internal server error',
   errors: [err],
