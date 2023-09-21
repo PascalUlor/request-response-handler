@@ -1,13 +1,17 @@
  {
     "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
+      
+        "@babel/preset-typescript",
+        "@babel/preset-env"
+    ],
+    "plugins": [
+      ["module-resolver", {
+        "root": ["."],
+        "alias": {
+          "@src": "./dist/src/",
+          "@test": "./dist/test/"
         }
-      ]
+      }]
     ],
     "ignore": [
       "./node_modules"

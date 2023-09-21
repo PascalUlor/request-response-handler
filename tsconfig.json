@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "esNext",
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "rootDir": ".",
+    "moduleResolution": "node10",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@tests/*": ["tests/*"],
+    },
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "sourceRoot": "/",
+    "inlineSources": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+  },
+  "include": ["./**/*.ts"],
+  "exclude": [
+    "node_modules/**/*",
+    ".vscode/**/*"
+    ]
+}
