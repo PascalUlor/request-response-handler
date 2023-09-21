@@ -1,6 +1,6 @@
 # request-response-handler
 
-**ABOUT** This is a very basic HTTP response handler for NodeJS application. 
+**ABOUT** This is a very basic HTTP response handler for NodeJS applications. 
 
 # Table Of Content
 
@@ -25,23 +25,30 @@ npm install --save request-response-handler
 ## Usage
 This package supports both ES6 and commonjs syntax
 
-### Basic statusCodes
+### Basic http status codes
 
 You can import some http statusCodes often used in projects:
 
 **Example**
 ```js
-const {
   CREATED, //201
   OK, // 200
   BAD_REQUEST, // 400
   CONFLICT, // 409
   NOT_FOUND, // 404
-  SERVER_ERROR, // 500
   UNAUTHORIZED, // 401
   FORBIDDEN, // 403
+  SERVER_ERROR, // 500
+```
+
+```js
+const {
+  SuccessStatusCodes,
+  ErrorStatusCodes
 } = require('request-response-handler');
 ```
+
+
 
 ### errorHandler
 Pass the `errorHandler` as a middleware to catch all errors in your app
@@ -60,7 +67,7 @@ Use `customError` to catch errors and return custom error messages in your app
 **Example**
 
 ```js
-const { customError, CONFLICT } = require('request-response-handler');
+const { customError, ErrorStatusCodes } = require('request-response-handler');
 /**
   * Create new error
   *
@@ -71,7 +78,7 @@ const { customError, CONFLICT } = require('request-response-handler');
   */
 
     createError({
-        status: CONFLICT,
+        status: ErrorStatusCodes.CONFLICT,
         message: 'User with email or username already exists',
     }),
 
@@ -82,7 +89,7 @@ const { customError, CONFLICT } = require('request-response-handler');
 **Example**
 handle 2XX responses with custom messages and response objects
 ```js
-const { success CREATED, OK} = require('request-response-handler');
+const { success SuccessStatusCodes} = require('request-response-handler');
 
 /**
   *Create success response data format
@@ -93,7 +100,7 @@ const { success CREATED, OK} = require('request-response-handler');
   * @param {object} body // optional
   * @return {object}
   */
-    success(res, CREATED, 'SignUp Successful', {
+    success(res, SuccessStatusCodes.CREATED, 'SignUp Successful', {
           id: user.id, username, email, token, apiKey: user.apiKey,
         });
 ```

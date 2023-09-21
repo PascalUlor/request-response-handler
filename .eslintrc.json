@@ -1,17 +1,48 @@
 {
     "env": {
-        // "browser": true,
-        "node": true,
+        "browser": true,
         "es2021": true,
-        "jest/globals": true
+        "jest": true
     },
-    "plugins": ["jest"],
     "extends": [
-        "airbnb-base"
+        "airbnb-base",
+        "plugin:import/typescript",
+        "plugin:@typescript-eslint/recommended"
     ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 12
+        "ecmaVersion": 12,
+        "sourceType": "module"
     },
+    "plugins": [
+        "jest",
+        "@typescript-eslint"
+    ],
     "rules": {
-    }
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "no-shadow": "off",
+        "max-len": ["error", {
+            "code":  150,
+            "ignoreComments":  true,
+            "ignoreTrailingComments":  true,
+            "ignoreUrls": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true
+          }]
+    },
+    "settings": {
+        "import/resolver": {
+          "alias": {
+            "map": [
+              ["@src", "./src"],
+              ["@tests", "./tests"]
+            ],
+            "extensions": [".ts", ".js"]
+          },
+          "node": {
+            "extensions": [".js", ".ts"]
+          }
+        }
+      }
 }
