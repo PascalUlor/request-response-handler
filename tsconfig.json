@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "esNext",
     "module": "commonjs",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "rootDir": ".",
-    "moduleResolution": "node",
+    "moduleResolution": "node10",
     "baseUrl": "./",
     "paths": {
       "@src/*": ["src/*"],
@@ -20,7 +20,7 @@
     "forceConsistentCasingInFileNames": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true,
   },
   "include": ["./**/*.ts"],
   "exclude": [
