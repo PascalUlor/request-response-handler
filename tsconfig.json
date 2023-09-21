@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "rootDir": ".",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@tests/*": ["tests/*"],
+    },
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "sourceRoot": "/",
+    "inlineSources": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+  },
+  "include": ["./**/*.ts"],
+  "exclude": [
+    "node_modules/**/*",
+    ".vscode/**/*"
+    ]
+}
