@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esNext",
+    "target": "es2019",
     "module": "commonjs",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
