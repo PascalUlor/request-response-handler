@@ -11,6 +11,9 @@
       "@src/*": ["src/*"],
       "@tests/*": ["tests/*"],
     },
+    "plugins": [
+      { "transform": "typescript-transform-paths" }
+    ],
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "dist",
