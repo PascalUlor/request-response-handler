@@ -1,4 +1,3 @@
-import 'module-alias/register';
 import { SuccessStatusCodes } from '@src/success/types';
 import { ErrorStatusCodes } from '@src/errors/types';
 import { handleResponse as success } from '@src/success';

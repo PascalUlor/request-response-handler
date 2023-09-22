@@ -4,12 +4,14 @@
 
 # Table Of Content
 
+<!-- TOC -->
 1. [Getting Started](#getting-started 'Getting Started')
-   .._[Installation](#installation 'Installation')
+   *_[Installation](#installation 'Installation')
 2. [Usage](#usage 'Usage')
 3. [Built With](#built-with 'Built With')
 4. [Useful Links](#useful-links 'Useful Links')
 5. [Improvements](#improvements 'Improvements')
+<!-- TOC -->
 
 ## Getting Started
 
