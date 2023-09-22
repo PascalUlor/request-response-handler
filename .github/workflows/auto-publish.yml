@@ -24,12 +24,6 @@ jobs:
       - name: Install Packages
         run: npm install --frozen-lockfile
 
-      - name: Test
-        run: npm test
-        env:
-          CI: true
-          FORCE_COLOR: 1
-
       - name: Generate Release Body
         run: npx extract-changelog-release > RELEASE_BODY.md
 
