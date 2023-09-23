@@ -120,7 +120,8 @@ const resourceConflict = (err: CustomError, req: any, res: any, next: any) => {
    * @param {object} next
    * @return {object}
    */
-const serverError = (err: CustomError, req: any, res: any): object => res.status(ErrorStatusCodes.SERVER_ERROR).json({
+/* eslint-disable */
+const serverError = (err: CustomError, req: any, res: any, next?: any): object => res.status(ErrorStatusCodes.SERVER_ERROR).json({
   success: false,
   message: err.message || 'Internal server error',
   errors: [err],
