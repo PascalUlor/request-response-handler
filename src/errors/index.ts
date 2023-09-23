@@ -33,7 +33,7 @@ const badRequest = (err: CustomError, req: any, res: any, next: any) => {
     success: false,
     errors: {
       message: err.message || 'Bad Request',
-      status: err.status,
+      errStatus: err.status,
       req,
     },
   });
