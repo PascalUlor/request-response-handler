@@ -1,6 +1,6 @@
 {
   "name": "request-response-handler",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Handle HTTP request responses",
   "main": "dist/src/index.js",
   "types": "./dist/index.d.ts",
