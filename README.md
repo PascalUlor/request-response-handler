@@ -25,7 +25,7 @@ npm install --save request-response-handler
 ```
 
 ## Usage
-This package supports both ES6 and commonjs syntax
+This package supports both ES6 **e.g import** and commonjs **e.g require** syntax
 
 ### Basic http status codes
 
@@ -43,13 +43,18 @@ You can import some http statusCodes often used in projects:
   SERVER_ERROR, // 500
 ```
 
+**As enums**
 ```js
 const {
   SuccessStatusCodes,
   ErrorStatusCodes
 } = require('request-response-handler');
 ```
+**or as constants**
 
+```js
+import { CREATED, BAD_REQUEST } from 'request-response-handler';
+```
 
 
 ### errorHandler
