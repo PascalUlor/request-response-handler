@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { stringify } from 'flatted';
 import { ErrorStatusCodes, CustomError } from '@src/errors/types';
 import { createError } from '@src/errors/errors';
 import { ObjectInterface } from '@src/utils/types';
@@ -34,7 +36,7 @@ const badRequest = (err: CustomError, req: any, res: any, next: any) => {
     errors: {
       message: err.message || 'Bad Request',
       status: err.status,
-      req,
+      req: stringify(req),
     },
   });
 };
@@ -48,7 +50,7 @@ const forbidden = (err: CustomError, req: any, res: any, next: any) => {
     success: false,
     message: err.message || 'Forbidden',
     errors: [err],
-    req,
+    req: stringify(req),
   });
 };
 
@@ -61,7 +63,7 @@ const unauthorized = (err: CustomError, req: any, res: any, next: any) => {
     success: false,
     message: err.message || 'Unauthorized',
     errors: [err],
-    req,
+    req: stringify(req),
   });
 };
 
@@ -83,7 +85,7 @@ const notFound = (err: CustomError, req: any, res: any, next: any) => {
     success: false,
     message: err.message || 'Resource not found',
     errors: [err],
-    req,
+    req: stringify(req),
   });
 };
 
@@ -106,7 +108,7 @@ const resourceConflict = (err: CustomError, req: any, res: any, next: any) => {
     errors: {
       message: err.message,
       status: err.status,
-      req,
+      req: stringify(req),
     },
   });
 };
@@ -117,14 +119,15 @@ const resourceConflict = (err: CustomError, req: any, res: any, next: any) => {
    * @param {object} err
    * @param {object} req
    * @param {object} res
-   * @param {object} next
+   * @param {object} _next
    * @return {object}
    */
-const serverError = (err: CustomError, req: any, res: any): object => res.status(ErrorStatusCodes.SERVER_ERROR).json({
+/* eslint-disable */
+const serverError = (err: CustomError, req: any, res: any, _next?: any): object => res.status(ErrorStatusCodes.SERVER_ERROR).json({
   success: false,
   message: err.message || 'Internal server error',
   errors: [err],
-  req,
+  req: stringify(req),
 });
 /**
    * Package all error handlers as object
