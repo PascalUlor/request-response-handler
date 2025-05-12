@@ -18,9 +18,9 @@
     "sourceMap": true,
     // Generate d.ts files
     "declaration": true,
-    // This compiler run should
-    // only output d.ts files
-    "emitDeclarationOnly": true,
+    // // This compiler run should
+    // // only output d.ts files
+    // "emitDeclarationOnly": true,
     "outDir": "dist",
     "sourceRoot": "/",
     "inlineSources": true,
