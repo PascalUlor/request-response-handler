@@ -15,3 +15,6 @@ module.exports = {
     },
   },
 };
+
+// Sample commit format
+// 'TK-08 | chore:update http constants'
